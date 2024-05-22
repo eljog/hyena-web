@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Quote | Hyena Realty</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quote.html">Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Project Cost Estimator</h1>
+        <p>Use our tool below to estimate the cost of your project.</p>
+        <form id="quote-form">
+            <label for="project-type">Project Type:</label>
+            <select id="project-type" name="project-type">
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="resort">Resort</option>
+            </select>
+            <label for="area">Area (in sq. ft.):</label>
+            <input type="number" id="area" name="area" min="1" required>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="quote-result"></div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hyena Realty</p>
+    </footer>
+</body>
+</html>

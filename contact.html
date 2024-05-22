@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hyena Realty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="quote.html">Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>For inquiries, please fill out the form below or reach out to us via the contact details provided.</p>
+            <form action="submit_contact.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <p><strong>Email:</strong> contact@hyenarealty.in</p>
+                <p><strong>Phone:</strong> +91 123 456 7890</p>
+                <p><strong>Address:</strong> 123 Realty Street, Kerala, India</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Hyena Realty</p>
+    </footer>
+</body>
+</html>
