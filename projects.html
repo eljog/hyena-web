@@ -5,41 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Projects - Hyena Realty</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="quote.html">Quote</a></li>
-            </ul>
+        <!-- Navigation updated to Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Hyena Realty</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="projects.html">Projects <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quote.html">Quote</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <section id="projects">
-            <h1>Our Featured Projects</h1>
-            <div class="project">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h2>Residential Complex</h2>
-                <p>This residential complex features modern amenities and a sustainable design, located in the heart of the city.</p>
-            </div>
-            <div class="project">
-                <img src="images/project2.jpg" alt="Project 2">
-                <h2>Commercial Plaza</h2>
-                <p>A state-of-the-art commercial plaza that serves as a hub for businesses, offering a variety of retail and office spaces.</p>
-            </div>
-            <div class="project">
-                <img src="images/project3.jpg" alt="Project 3">
-                <h2>Luxury Resort</h2>
-                <p>Located on the picturesque coastline, this luxury resort offers exclusive amenities and breathtaking views.</p>
+    <main class="container mt-5">
+        <section id="projects" class="text-center">
+            <h1 class="display-4">Our Featured Projects</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project1.jpg" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Residential Complex</h5>
+                            <p class="card-text">This residential complex features modern amenities and a sustainable design, located in the heart of the city.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project2.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Commercial Plaza</h5>
+                            <p class="card-text">A state-of-the-art commercial plaza that serves as a hub for businesses, offering a variety of retail and office spaces.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/project3.jpg" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Luxury Resort</h5>
+                            <p class="card-text">Located on the picturesque coastline, this luxury resort offers exclusive amenities and breathtaking views.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
         <p>&copy; 2023 Hyena Realty</p>
     </footer>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

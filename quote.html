@@ -6,38 +6,68 @@
     <title>Project Quote | Hyena Realty</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="quote.html">Quote</a></li>
-            </ul>
+        <!-- Navigation updated to Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Hyena Realty</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="quote.html">Quote <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Project Cost Estimator</h1>
-        <p>Use our tool below to estimate the cost of your project.</p>
-        <form id="quote-form">
-            <label for="project-type">Project Type:</label>
-            <select id="project-type" name="project-type">
-                <option value="residential">Residential</option>
-                <option value="commercial">Commercial</option>
-                <option value="landscaping">Landscaping</option>
-                <option value="resort">Resort</option>
-            </select>
-            <label for="area">Area (in sq. ft.):</label>
-            <input type="number" id="area" name="area" min="1" required>
-            <button type="submit">Calculate</button>
+    <main class="container mt-5">
+        <h1 class="display-4">Project Cost Estimator</h1>
+        <p class="lead">Use our tool below to estimate the cost of your project.</p>
+        <form id="quote-form" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="project-type">Project Type:</label>
+                <select id="project-type" name="project-type" class="form-control">
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="landscaping">Landscaping</option>
+                    <option value="resort">Resort</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="area">Area (in sq. ft.):</label>
+                <input type="number" id="area" name="area" class="form-control" min="1" required>
+                <div class="invalid-feedback">
+                    Please enter the project area.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate</button>
         </form>
-        <div id="quote-result"></div>
+        <div id="quote-result" class="mt-3"></div>
     </main>
-    <footer>
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
         <p>&copy; 2023 Hyena Realty</p>
     </footer>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
